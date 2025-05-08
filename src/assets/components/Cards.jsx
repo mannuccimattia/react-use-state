@@ -8,10 +8,13 @@ const Cards = (props) => {
   return (
     <div className="cards-list">
       {languages.map(language => {
-        return activeButton === `btn-${language.id}` ? (
+        const btnId = `btn-${language.id}`
+        const cardId = `card-${language.id}`
+
+        return activeButton === btnId ? (
           <CardItem
             language={language}
-            key={`card-${language.id}`}
+            key={cardId}
             isActive={activeButton}
           />
         ) : null

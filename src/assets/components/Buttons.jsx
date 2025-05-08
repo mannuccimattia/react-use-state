@@ -4,17 +4,22 @@ import ButtonItem from "./ButtonItem"
 
 const Buttons = (props) => {
   const { activeButton, setActiveButton } = props
+
   return (
     <>
       <div className="btn-wrapper">
-        {languages.map(language => (
-          <ButtonItem
-            language={language}
-            key={`btn-${language.id}`}
-            isActive={activeButton === `btn-${language.id}`}
-            onToggle={() => setActiveButton(activeButton === `btn-${language.id}` ? null : `btn-${language.id}`)}
-          />
-        ))}
+        {languages.map(language => {
+          const btnId = `btn-${language.id}`
+
+          return (
+            <ButtonItem
+              language={language}
+              key={btnId}
+              isActive={activeButton === btnId}
+              onToggle={() => setActiveButton(activeButton === btnId ? null : btnId)}
+            />
+          )
+        })}
       </div>
     </>
   )

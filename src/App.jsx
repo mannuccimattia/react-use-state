@@ -9,8 +9,8 @@ function App() {
     <>
       <h1>Learn Web development</h1>
       <div className="container">
-        <Buttons activeButton={activeButton} setActiveButton={setActiveButton}></Buttons>
-        <Cards activeButton={activeButton}></Cards>
+        <Buttons activeButton={activeButton} setActiveButton={setActiveButton} />
+        <Cards activeButton={activeButton} />
         {
           activeButton === null &&
           <div className="card">
