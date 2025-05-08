@@ -31,6 +31,11 @@ h1 {
   cursor: pointer;
 }
 
+.btn:hover,
+.btn.active {
+  background-color: orange;
+}
+
 .card {
   margin: 50px 0;
   border: 1px solid black;

@@ -11,7 +11,7 @@ const Buttons = (props) => {
           <ButtonItem
             language={language}
             key={`btn-${language.id}`}
-            isActive={activeButton === language.id}
+            isActive={activeButton === `btn-${language.id}`}
             onToggle={() => setActiveButton(activeButton === `btn-${language.id}` ? null : `btn-${language.id}`)}
           />
         ))}
