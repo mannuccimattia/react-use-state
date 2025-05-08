@@ -7,9 +7,9 @@ function App() {
     <>
       <h1>Learn Web development</h1>
       <div className="container">
-        <div className="btn-wrapper">
-          <Buttons></Buttons>
-        </div>
+
+        <Buttons></Buttons>
+
         <Cards></Cards>
       </div>
     </>

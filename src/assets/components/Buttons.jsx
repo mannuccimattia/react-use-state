@@ -1,11 +1,17 @@
 import languages from "../../data/languages"
+import { useState } from "react"
+import ButtonItem from "./ButtonItem"
 
 const Buttons = () => {
+
   return (
     <>
-      {languages.map(item => (
-        <button className="btn" key={`btn-${item.id}`}>{item.title}</button>
-      ))}
+      <div className="btn-wrapper">
+
+        {languages.map(language => (
+          <ButtonItem language={language} key={`btn-${language.id}`} />
+        ))}
+      </div>
     </>
   )
 }
