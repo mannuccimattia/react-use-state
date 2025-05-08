@@ -1,16 +1,18 @@
 import Buttons from "./assets/components/Buttons"
 import Cards from "./assets/components/Cards"
+import { useState } from "react"
 
 function App() {
+  const [activeButton, setActiveButton] = useState(null)
 
   return (
     <>
       <h1>Learn Web development</h1>
       <div className="container">
 
-        <Buttons></Buttons>
+        <Buttons activeButton={activeButton} setActiveButton={setActiveButton}></Buttons>
 
-        <Cards></Cards>
+        <Cards activeButton={activeButton}></Cards>
       </div>
     </>
   )
