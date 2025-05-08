@@ -1,13 +1,11 @@
 import languages from "../../data/languages"
+import CardItem from "./CardItem"
 
 const Cards = () => {
   return (
-    <div className="card">
-      {languages.map(item => (
-        <>
-          <h2>{item.title}</h2>
-          <p>{item.description}</p>
-        </>
+    <div className="cards-list">
+      {languages.map(language => (
+        <CardItem language={language} key={`card-${language.id}`} />
       ))}
     </div>
   )
